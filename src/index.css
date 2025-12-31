@@ -19,15 +19,11 @@ body {
 
 #container {
   margin: 0 auto;
-  /* background-color: rgb(158, 255, 255); */
   height: 100%;
-  /* width:40%; */
   width: 70%;
-  /* min-width: 600px; */
   padding: 3rem;
   font-family: "Inter", sans-serif;
   user-select: none;
-  /* max-width: 900px; */
   max-width: 600px;
 }
 
@@ -299,6 +295,8 @@ a {
     min-width: 600px;
     padding: 2.5rem 2rem;
   }
+
+  
 }
 
 /* 📱 Phones */
@@ -322,6 +320,8 @@ a {
   .skill-name {
     font-size: 0.75rem;
   }
+
+  
 
   .Project-box {
     flex-direction: column;
@@ -353,8 +353,28 @@ a {
 }
 
 @media (min-width: 1600px) {
-
   #container {
-    min-width:900px;
+    min-width: 900px;
   }
 }
+
+@media (hover: none) {
+  /* Disable hover animations */
+  .skill-icon:hover {
+    transform: none;
+    filter: none;
+  }
+
+  /* Hide cursor-following elements */
+  .percent,
+  #see-you-soon-div {
+    display: none;
+  }
+
+  /* Disable hover-based buttons */
+  .btn:hover {
+    background-color: inherit;
+    color: inherit;
+  }
+}
+
