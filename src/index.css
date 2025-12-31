@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 *,
 *::before,
 *::after {
@@ -8,16 +17,18 @@
   box-sizing: border-box;
 }
 
-
 #container {
   margin: 0 auto;
   /* background-color: rgb(158, 255, 255); */
   height: 100%;
-  width: 40%;
-  min-width: 600px;
+  /* width:40%; */
+  width: 70%;
+  /* min-width: 600px; */
   padding: 3rem;
   font-family: "Inter", sans-serif;
   user-select: none;
+  /* max-width: 900px; */
+  max-width: 600px;
 }
 
 #main-heading {
@@ -283,24 +294,67 @@ a {
   color: #754912;
 }
 
-/* 📱 Phones */
-@media (max-width: 600px) {
+@media (min-width: 601px) and (max-width: 900px) {
+  #container {
+    min-width: 600px;
+    padding: 2.5rem 2rem;
+  }
+}
 
-  #container{
+/* 📱 Phones */
+
+@media (max-width: 600px) {
+  #container {
     width: 100%;
     padding: 1.5rem 1rem;
   }
 
+  #skills {
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
 
+  .skill-icon {
+    height: 3.2rem;
+  }
 
-  #about-container{
+  .skill-name {
+    font-size: 0.75rem;
+  }
+
+  .Project-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .project-desc-box {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  #about-container {
     padding: 1.2rem;
   }
 
   .about-content-1,
-  .about-content-2{
+  .about-content-2 {
     font-size: 0.9rem;
     line-height: 1.6rem;
   }
 
+  #Contact {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1600px) {
+
+  #container {
+    min-width:900px;
+  }
 }
